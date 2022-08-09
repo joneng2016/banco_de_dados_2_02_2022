@@ -1,5 +1,5 @@
-SELECT 
-    "USE MySQL database" 
+SELECT
+    "USE MySQL database"
 AS 
     "INFO";
 
@@ -75,8 +75,80 @@ INSERT INTO students (
     3
 );
 
+SELECT 
+    "Select All columns" 
+AS 
+    "INFO";
 
 SELECT * FROM students;
 
 
+SELECT 
+    "Select Specific columns" 
+AS 
+    "INFO";
 
+SELECT 
+    first_name, 
+    last_name,
+    gender 
+FROM
+    students;    
+
+
+
+SELECT 
+    "Select Specific columns - version 2" 
+AS 
+    "INFO";
+
+SELECT 
+    students.first_name, 
+    students.last_name,
+    students.gender 
+FROM
+    students;
+
+
+
+SELECT 
+    "Select Specific columns - version 3" 
+AS 
+    "INFO";
+
+SELECT 
+    aula1.students.first_name, 
+    aula1.students.last_name,
+    aula1.students.gender 
+FROM
+    aula1.students;
+
+
+SELECT 
+    "Select Specific columns - version 4" 
+AS 
+    "INFO";
+
+SELECT 
+    aula1.students.first_name as primeiro_nome,
+    aula1.students.last_name as segundo_nome,
+    aula1.students.gender as sexo
+FROM
+    aula1.students;
+
+
+SELECT 
+    "Select with where" 
+AS 
+    "INFO";
+
+
+
+SELECT 
+    students.first_name as primeiro_nome,
+    students.last_name as segundo_nome,
+    students.gender as sexo
+FROM
+    students
+WHERE 
+    students.first_name = 'Ernane';
